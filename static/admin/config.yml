@@ -61,7 +61,7 @@ collections:
           label: "Message Series", 
           name: "messageSeries", 
           widget: "relation",
-          collection: "series",
+          collection: "messageSeries",
           displayFields: ["seriesTitle", "seriesGraphic"]
         }
   - name: "messageSeries"
