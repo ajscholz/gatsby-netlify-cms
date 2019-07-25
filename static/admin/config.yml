@@ -63,46 +63,46 @@ collections:
           collection: "series",
           displayFields: ["seriesTitle", "seriesGraphic"]
         }
-    - label: "Message Series"
-      name: "messageSeries"
-      description: "A message series."
-      folder: "src/pages/series"
-      create: true
-      fields: 
-        - { 
-            label: "Series Title", 
-            name: "seriesTitle", 
-            widget: "string"
-          }
-        - { 
-            label: "Series Description", 
-            name: "seriesDescription", 
-            widget: "text"
-          }
-        - { 
-            label: "Series Start Date", 
-            name: "seriesStartDate", 
-            widget: "date",
-            default: ""
-          }
-        - { 
-            label: "Series End Date", 
-            name: "seriesEndDate", 
-            widget: "date",
-            default: ""
-          }
-        - { 
-            label: "Series Graphic", 
-            name: "seriesGraphic", 
-            widget: "image",
-            allowMultiple: false,
-          }
-        - { 
-            label: "Series Length", 
-            name: "seriesLength", 
-            widget: "number",
-            valueType: "int",
-          }
+  - label: "Message Series"
+    name: "messageSeries"
+    description: "A message series."
+    folder: "src/pages/series"
+    create: true
+    fields: 
+      - { 
+          label: "Series Title", 
+          name: "seriesTitle", 
+          widget: "string"
+        }
+      - { 
+          label: "Series Description", 
+          name: "seriesDescription", 
+          widget: "text"
+        }
+      - { 
+          label: "Series Start Date", 
+          name: "seriesStartDate", 
+          widget: "date",
+          default: ""
+        }
+      - { 
+          label: "Series End Date", 
+          name: "seriesEndDate", 
+          widget: "date",
+          default: ""
+        }
+      - { 
+          label: "Series Graphic", 
+          name: "seriesGraphic", 
+          widget: "image",
+          allowMultiple: false,
+        }
+      - { 
+          label: "Series Length", 
+          name: "seriesLength", 
+          widget: "number",
+          valueType: "int",
+        }
   - name: "meetups"
     label: "Meetups"
     description: "Meetup dates, location, and presenter information."
