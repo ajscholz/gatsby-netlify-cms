@@ -8,6 +8,101 @@ public_folder: /img
 display_url: https://gatsby-netlify-cms-example.netlify.com/
 
 collections:
+  - label: "Message"
+    name: "message"
+    description: "A single weekly message."
+    folder: "src/pages/messages"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: 
+      - { 
+          label: "Message Title", 
+          name: "messageTitle", 
+          widget: "string"
+        }
+      - { 
+          label: "Message Description", 
+          name: "messageDescription", 
+          widget: "text"
+        }
+      - { 
+          label: "Message Date", 
+          name: "messageDate", 
+          widget: "date",
+          default: ""
+        }
+      - { 
+          label: "Communicator", 
+          name: "messageCommunicator", 
+          widget: "select",
+          default: "Ben Stroup",
+          options: ["Ben Stroup", "Andrew Scholz"]
+        }
+      - { 
+          label: "Message Photo", 
+          name: "messagePhoto", 
+          widget: "image",
+          allowMultiple: false,
+        }
+      - { 
+          label: "Message Video", 
+          name: "messageVideo", 
+          widget: "file",
+          allowMultiple: false,
+        }
+      - { 
+          label: "Series Part", 
+          name: "seriesPart", 
+          widget: "number",
+          valueType: "int",
+        }
+      - { 
+          label: "Message Series", 
+          name: "messageSeries", 
+          widget: "relation",
+          collection: "series",
+          displayFields: ["seriesTitle", "seriesGraphic"]
+        }
+    - label: "Message Series"
+      name: "messageSeries"
+      description: "A message series."
+      folder: "src/pages/series"
+      create: true
+      fields: 
+        - { 
+            label: "Series Title", 
+            name: "seriesTitle", 
+            widget: "string"
+          }
+        - { 
+            label: "Series Description", 
+            name: "seriesDescription", 
+            widget: "text"
+          }
+        - { 
+            label: "Series Start Date", 
+            name: "seriesStartDate", 
+            widget: "date",
+            default: ""
+          }
+        - { 
+            label: "Series End Date", 
+            name: "seriesEndDate", 
+            widget: "date",
+            default: ""
+          }
+        - { 
+            label: "Series Graphic", 
+            name: "seriesGraphic", 
+            widget: "image",
+            allowMultiple: false,
+          }
+        - { 
+            label: "Series Length", 
+            name: "seriesLength", 
+            widget: "number",
+            valueType: "int",
+          }
   - name: "meetups"
     label: "Meetups"
     description: "Meetup dates, location, and presenter information."
