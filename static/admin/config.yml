@@ -14,7 +14,7 @@ collections:
     folder: "src/pages/messages"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    identifierField: messageTitle
+    identifier_field: messageTitle
     fields: 
       - { 
           label: "Message Title", 
@@ -68,7 +68,7 @@ collections:
     label: "Message Series"
     description: "A message series."
     folder: "src/pages/series"
-    identifierField: "seriesTitle"
+    identifier_field: "seriesTitle"
     create: true
     fields: 
       - { 
